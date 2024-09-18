@@ -17,7 +17,7 @@ const APICreateUser = async (req: NextApiRequest, res: NextApiResponse) => {
       password,
     })
 
-    res.status(201).json(response.data)
+    res.status(200).json(response.data)
   } catch (error: any) {
     res.status(400).json({ error: error.message })
   }
