@@ -1,6 +1,6 @@
 # Projeto Next.js
 
-Projeto [`Next.js`](https://nextjs.org/docs) usando React e TypeScript, pra você que é jacu, lembrar e usar de modelo.
+Projeto [`Next.js`](https://nextjs.org/docs) usando React e TypeScript, pra você que é jacu lembrar.
 
 ## Como Iniciar
 
