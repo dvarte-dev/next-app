@@ -1,4 +1,3 @@
-// src/functions/fetcher.ts
 import axios, { AxiosRequestConfig } from "axios"
 
 export const fetcher = async (

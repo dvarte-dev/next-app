@@ -8,9 +8,13 @@ export const getUser = async (userId: string) => {
   }
 }
 
-export const createUser = async (name: string, email: string) => {
+export const createUser = async (
+  name: string,
+  email: string,
+  password: string,
+) => {
   try {
-    const body = { name, email }
+    const body = { name, email, password }
     return await fetcher("/api/users", "POST", {}, body)
   } catch (error: any) {
     throw new Error(`Error creating user: ${error.message}`)
@@ -21,9 +25,10 @@ export const updateUser = async (
   userId: string,
   name?: string,
   email?: string,
+  password?: string,
 ) => {
   try {
-    const body = { name, email }
+    const body = { name, email, password }
     return await fetcher(`/api/users/${userId}`, "PUT", {}, body)
   } catch (error: any) {
     throw new Error(`Error updating user: ${error.message}`)

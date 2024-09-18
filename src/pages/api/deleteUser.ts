@@ -1,4 +1,3 @@
-// src/pages/api/users/deleteUser.ts
 import { NextApiRequest, NextApiResponse } from "next"
 import axios from "axios"
 
@@ -14,7 +13,7 @@ const APIDeleteUser = async (req: NextApiRequest, res: NextApiResponse) => {
 
     const response = await axios.delete(`${apiUrl}/users/${userId}`)
 
-    res.status(204).end() // No content response for successful deletion
+    res.status(200).json(response.data)
   } catch (error: any) {
     res.status(400).json({ error: error.message })
   }
