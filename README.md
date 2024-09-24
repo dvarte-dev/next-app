@@ -4,19 +4,45 @@ Projeto [`Next.js`](https://nextjs.org/docs) usando React e TypeScript, pra voc�
 
 ## Como Iniciar
 
-1. **Clone o Repositório Template (sem histórico de commits):**
+1. **Clone o Repositório Template (Linux):**
 
    ```bash
-   git clone --depth 1 https://github.com/dvarte-dev/next-app.git <novo-repositorio>
-   cd <novo-repositorio>
-   rm -rf .git
+   cd <path novo-repositorio>
+   git clone --depth 1 https://github.com/dvarte-dev/next-app.git
+   cd next-app    # Muda para o diretório next-app
+   mv * .. # Move todos os arquivos e diretórios para o diretório pai
+   mv .* .. # Move arquivos ocultos para o diretório pai
+   cd .. # Muda para o diretório pai
+   rmdir next-app # Remover pasta next-app
+   ```
+
+   **Versão para Prompt de Comando (Windows):**
+
+   ```cmd
+   cd <path novo-repositorio>
+   git clone --depth 1 https://github.com/dvarte-dev/next-app.git
+   cd next-app
+   move * ..\
+   move .* ..\
+   cd ..
+   rmdir /S /Q next-app
+   ```
+
+   **Alternativa usando (PowerShell):**
+
+   ```powershell
+   cd <path novo-repositorio>
+   git clone --depth 1 https://github.com/dvarte-dev/next-app.git
+   cd next-app
+   Move-Item * ..\
+   Move-Item -Force .* ..\
+   cd ..
+   Remove-Item next-app -Recurse -Force
    ```
 
 2. **Inicie um Novo Repositório:**
 
    ```bash
-   git init
-   git remote add origin https://github.com/dvarte-dev/<novo-repositorio>.git
    git add .
    git commit -m "create <novo-repositorio>"
    git push -u origin main
