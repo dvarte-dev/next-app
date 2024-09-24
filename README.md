@@ -4,7 +4,9 @@ Projeto [`Next.js`](https://nextjs.org/docs) usando React e TypeScript, pra voc�
 
 ## Como Iniciar
 
-1. **Clone o Repositório Template (Linux):**
+1. **Clone o Repositório Template (sem histórico de commits):**
+
+   **Versão bash (Linux):**
 
    ```bash
    cd <path novo-repositorio>
